@@ -3,6 +3,8 @@
 import math
 import sys
 
+TREE = '#'
+
 def slope(area, dx, dy):
 	x = 0
 	y = 0
@@ -10,7 +12,7 @@ def slope(area, dx, dy):
 
 	for l in area:
 		if y % dy == 0:
-			trees += 1 if l[x % len(l)] == '#' else 0
+			trees += 1 if l[x % len(l)] == TREE else 0
 			x += dx
 		y += 1
 
