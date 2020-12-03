@@ -7,14 +7,12 @@ TREE = '#'
 
 def slope(area, dx, dy):
 	x = 0
-	y = 0
 	trees = 0
 
-	for l in area:
+	for y, l in enumerate(area):
 		if y % dy == 0:
 			trees += 1 if l[x % len(l)] == TREE else 0
 			x += dx
-		y += 1
 
 	return trees
 
