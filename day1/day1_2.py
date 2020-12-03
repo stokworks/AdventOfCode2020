@@ -12,10 +12,4 @@ if __name__ == '__main__':
 		for j, n2 in enumerate(inputs[i+1:]):
 			for n3 in inputs[i+j+1:]:
 				if n1 + n2 + n3 == TARGET:
-					print('n1 = {}'.format(n1))
-					print('n2 = {}'.format(n2))
-					print('n3 = {}'.format(n3))
-					print('product = {}'.format(n1 * n2 * n3))
-					sys.exit()
-
-	print('Could not find solution.')
+					print(n1 * n2 * n3)

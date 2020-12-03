@@ -11,9 +11,4 @@ if __name__ == '__main__':
 	for i, n1 in enumerate(inputs):
 		for n2 in inputs[i+1:]:
 			if n1 + n2 == TARGET:
-				print('n1 = {}'.format(n1))
-				print('n2 = {}'.format(n2))
-				print('product = {}'.format(n1 * n2))
-				sys.exit()
-
-	print('Could not find solution.')
+				print(n1 * n2)
