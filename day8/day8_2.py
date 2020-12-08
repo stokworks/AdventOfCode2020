@@ -17,10 +17,7 @@ def terminates(prog):
 		
 		pc += 1
 
-	if pc == len(prog):
-		return (True, acc)
-	else:
-		return (False, acc)
+	return (pc == len(prog), acc)
 
 if __name__ == '__main__':
 	prog = []
