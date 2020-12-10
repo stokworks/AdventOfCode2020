@@ -24,7 +24,7 @@ if __name__ == '__main__':
 			n_ways[i] += n_ways[i - 1] + n_ways[i - 2]
 		elif i == 1:
 			n_ways[i] += n_ways[i - 1]
-		if i == 0:
+		elif i == 0:
 			n_ways[i] = 1
 
 	print(n_ways[-1])
