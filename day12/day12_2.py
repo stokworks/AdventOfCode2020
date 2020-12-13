@@ -21,9 +21,6 @@ if __name__ == '__main__':
 
 	with open(sys.argv[1]) as f:
 		for r in f:
-			r = r.strip()
-			print(x, y, wx, wy)
-			print(r)
 			ins = r[0]
 			num = int(r[1:])
 			if ins == 'N':
@@ -42,5 +39,4 @@ if __name__ == '__main__':
 				x += wx * num
 				y += wy * num
 
-	print(x, y, wx, wy)
 	print(abs(x) + abs(y))
