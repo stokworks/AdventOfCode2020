@@ -7,13 +7,12 @@ if __name__ == '__main__':
 	schedule = []
 
 	with open(sys.argv[1]) as f:
-		for l in f:
-			if not leave:
-				leave = int(l)
-			else:
-				for t in l.strip().split(','):
-					if t != 'x':
-						schedule.append(int(t))
+		l = f.read().split('\n')
+		leave = int(l[0])
+
+		for t in l[1].split(','):
+			if not t == 'x':
+				schedule.append(int(t))
 
 	early = min([((leave // t + 1) * t, t) for t in schedule])
 	print((early[0] - leave) * early[1])

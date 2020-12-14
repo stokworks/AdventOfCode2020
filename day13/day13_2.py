@@ -6,19 +6,14 @@ import itertools
 import sys
 
 if __name__ == '__main__':
-	leave = None
 	schedule = []
 
 	with open(sys.argv[1]) as f:
-		for l in f:
-			if not leave:
-				leave = int(l)
-			else:
-				i = 0
-				for t in l.strip().split(','):
-					if not t == 'x':
-						schedule.append((int(t), i))
-					i += 1
+		l = f.read().split('\n')
+
+		for i, t in enumerate(l[1].split(',')):
+			if not t == 'x':
+				schedule.append((int(t), i))
 
 	combinations = list(itertools.combinations(schedule, 2))
 	A = []
