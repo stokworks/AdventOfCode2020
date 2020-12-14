@@ -15,7 +15,7 @@ if __name__ == '__main__':
 			if not t == 'x':
 				schedule.append((int(t), i))
 
-	combinations = list(itertools.combinations(schedule, 2))
+	combinations = itertools.combinations(schedule, 2)
 	A = []
 	b = []
 
