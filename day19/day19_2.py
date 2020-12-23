@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-import re
 import sys
 
 def parse_rule(rule_txt):
